@@ -4,7 +4,7 @@
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 export const siteMetadata = {
   title: `The Tutorial Site`,
