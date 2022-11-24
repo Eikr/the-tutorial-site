@@ -3,6 +3,9 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 
+const allowedBlogStatus = `${process.env.GATSBY_BLOG_STATUS}`; 
+console.log("index.js allowedBlogStatus = " + allowedBlogStatus);
+
 const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="My Blog Posts">
