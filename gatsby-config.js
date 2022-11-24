@@ -1,13 +1,16 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-module.exports = {
-  siteMetadata: {
-    title: `The Tutorial Site`,
-    siteUrl: `https://www.yourdomain.tld`,
-  },
-  plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-  ],
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+export const siteMetadata = {
+  title: `The Tutorial Site`,
+  siteUrl: `https://www.yourdomain.tld`,
 };
+export const plugins = [
+  "gatsby-plugin-image",
+  "gatsby-plugin-sharp",
+];
