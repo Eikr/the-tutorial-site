@@ -6,11 +6,13 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-export const siteMetadata = {
-  title: `The Tutorial Site`,
-  siteUrl: `https://www.yourdomain.tld`,
+module.exports = {
+  siteMetadata: {
+    title: `The Tutorial Site`,
+    siteUrl: `https://www.yourdomain.tld`,
+  },
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+  ],
 };
-export const plugins = [
-  "gatsby-plugin-image",
-  "gatsby-plugin-sharp",
-];
