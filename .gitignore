@@ -7,3 +7,6 @@ public
 
 # dotenv environment variable files
 .env*
+
+# WSL file copy bug thing
+*Zone.Identifier

@@ -3,8 +3,8 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 
-const allowedBlogStatus = `${process.env.GATSBY_BLOG_STATUS}`; 
-console.log("index.js allowedBlogStatus = " + allowedBlogStatus);
+// const allowedBlogStatus = `${process.env.GATSBY_BLOG_STATUS}`; 
+// console.log("index.js allowedBlogStatus = " + allowedBlogStatus);
 
 const BlogPage = ({ data }) => {
   return (
@@ -31,8 +31,9 @@ export const query = graphql`
       nodes {
         frontmatter {
           date(formatString: "YYYY-MM-DD")
-          title
           slug
+          status
+          title
         }
         id
       }
